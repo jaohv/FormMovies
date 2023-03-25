@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro de Filmes</title>
+	<style>
+		form label, form input, form select, form checkbox {
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Cadastro de Filmes</h1>
+    <form method="POST" action="salvar.php">
+		<label for="nome">Nome do Filme:</label>
+		<input type="text" id="nome" name="nome"><br>
+
+		<label for="mes_ano">Ano:</label>
+		<input type="text" id="mes_ano" name="mes_ano"><br>
+
+		<label for="legendado">Legendado:</label>
+		<input type="radio" id="legendado" name="legendado" value="sim">Sim
+		<input type="radio" id="legendado" name="legendado" value="nao">Nao<br>
+
+		<label for="idade">Classificacao:</label>
+		<select id="idade" name="idade">
+			<option value="12">12 anos</option>
+			<option value="14">14 anos</option>
+			<option value="16">16 anos</option>
+			<option value="acima16">Acima de 16 anos</option>
+		</select><br>
+
+		<label for="genero">Genero:</label>
+		<input type="checkbox" id="terror" name="genero[]" value="terror">Terror
+		<input type="checkbox" id="acao" name="genero[]" value="acao">Acao
+		<input type="checkbox" id="comedia" name="genero[]" value="comedia">Comedia
+		<input type="checkbox" id="romance" name="genero[]" value="romance">Romance<br>
+
+        <label for="imagem">Imagem:</label>
+        <input type="file" id="imagem" name="imagem"><br>
+
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>
